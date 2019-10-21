@@ -33,24 +33,28 @@ Promise.all([grabCompanies(), grabProducts(), grabOfferings()]).then(
       min: 1,
       max: 15,
     });
-    //console.log(productsInPriceRange);
+    console.log(productsInPriceRange);
 
     const groupedCompaniesByLetter = groupCompaniesByLetter(companies);
-    //console.log(groupedCompaniesByLetter);
+    console.log(groupedCompaniesByLetter);
+
     const groupedCompaniesByState = groupCompaniesByState(companies);
-    //console.log(groupedCompaniesByState);
+    console.log(groupedCompaniesByState);
+
     const processedOfferings = processOfferings({
       companies,
       products,
       offerings,
     });
-    //console.log(processedOfferings);
+    console.log(processedOfferings);
+
     const threeOrMoreOfferings = companiesByNumberOfOfferings(
       companies,
       offerings,
       3
     );
-    //console.log(threeOrMoreOfferings);
+    console.log(threeOrMoreOfferings);
+    
     const processedProducts = processProducts({ products, offerings });
     console.log(processedProducts);
   } // End of responses
